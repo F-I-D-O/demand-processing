@@ -3,7 +3,7 @@ This tool is made for creating **agentpolis** format data from public taxi trips
 ## instructions:
 1. Find data you want prior to 2016. You can use for example this dataset:
 	-  https://data.cityofnewyork.us/Transportation/2014-Yellow-Taxi-Trip-Data/gn7m-em8n which contains data of trips in New York in 2014. Such data is parsable for our script.
-	- you can search your own, just be aware of required data format. Searching for combination of "New York taxi csv data 20xx" should give your relevant output. Or you can simply use data from link above.
+	- you can search your own, just be aware of required data format. Searching for combination of "New York taxi csv data 20xx" should give you relevant output. Or you can simply use data from link above.
 2. unzip the downloaded file
 3. edit config.py.
 	- Change **data_dir** to your one (you specify the path to your downloaded data)
