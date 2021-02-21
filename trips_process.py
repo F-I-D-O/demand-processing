@@ -2,9 +2,11 @@ import pandas as pd
 import numpy as np
 import config
 
+
 def data_valid(row):
     return(float(row[1]) > config.city_envelopes[0] and float(row[2]) > config.city_envelopes[1]
            and float(row[3]) < config.city_envelopes[2] and float(row[4]) < config.city_envelopes[3])
+
 
 def convert_time(time):
     time = time.split(' ')
@@ -14,16 +16,19 @@ def convert_time(time):
     time = int(time) * 1000
     return str(time)
 
+
 def write_data(row):
     fw.write(row[0])
     for i in range(1,6):
         fw.write(' ' + str(row[i]))
     fw.write("\n")
 
+
 def initialize():
     df = pd.read_csv(config.data_dir,nrows=1)
     first_day = str(df['tpep_pickup_datetime'])[10:15]
     return first_day
+
 
 if __name__ == "__main__":
     first_day = initialize()
