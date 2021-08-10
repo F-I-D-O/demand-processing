@@ -39,6 +39,6 @@ if __name__ == "__main__":
     data_list = np.array([[]])
     with open(config.output_dir, 'w', encoding='utf-8') as fw:
         for row in df_numpy:
-            if(data_valid(row)):
+            if data_valid(row):
                 row[0] = convert_time(row[0])
                 write_data(row)
